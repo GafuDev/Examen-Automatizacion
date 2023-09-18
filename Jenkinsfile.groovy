@@ -36,7 +36,7 @@ pipeline {
             steps {
                 dir('Examen-Automatizacion') {
                     bat 'echo Realizando pruebas del proyecto...'  
-                     bat 'echo <testsuites><testsuite name="Pruebas" tests="2" failures="0"><testcase name="Prueba 1" time="1.0" /><testcase name="Prueba 2" time="1.5" /></testsuite></testsuites> > pruebas.xml'
+                     echo ^<testsuites^>^<testsuite name="Pruebas" tests="2" failures="0"^>^<testcase name="Prueba 1" time="1.0" /^>^<testcase name="Prueba 2" time="1.5" /^>^</testsuite^>^</testsuites^> > pruebas.xml
                 }
             }
         }
